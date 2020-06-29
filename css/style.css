@@ -142,6 +142,11 @@ hr {
 
 .top-button {
   text-align: center;
+  padding: 10px 30px;
+  margin-bottom: 0;
+  font-size: 18px;
+  border: 5px solid transparent;
+  border-radius: 0px;
 }
 
 .btn-flat-border {
