@@ -226,6 +226,17 @@ hr {
   color: #0090aa;
 }
 
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 50px);
+  transition : all 800ms;
+}
+
+.effect-fade.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
 /* Skills */
 
 #skills {
