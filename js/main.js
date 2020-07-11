@@ -18,7 +18,22 @@ jQuery(document).ready(function( $ ) {
     $(".navbar-collapse.collapse").removeClass('in');
   });
 
-  $(function(){
+  	// SKILLSスクロール時に1回転させる
+　	$(function(){
+	　$(window).scroll(function (){
+		$('.rotate').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('rotate-animation');
+			}
+		});
+	　});
+	});
+
+  	// Workスクロール時にふわっと表示させる
+　	$(function(){
 	　$(window).scroll(function (){
 		$('.effect-fade').each(function(){
 			var elemPos = $(this).offset().top;
@@ -31,7 +46,7 @@ jQuery(document).ready(function( $ ) {
 	　});
 	});
 
-  		// HTML Chart
+		// HTML Chart
 		if($('#html').length) {
 
 			var doughnutData = [{
@@ -212,5 +227,5 @@ jQuery(document).ready(function( $ ) {
 	    var myDoughnut = new Chart(document.getElementById("kubernetes").getContext("2d")).Doughnut(doughnutData);
 		};
 
-
 });
+
