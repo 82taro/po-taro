@@ -253,7 +253,7 @@ hr {
 }
 
 .rotate.rotate-animation {
-  animation:3s linear 1 rotation;
+  animation:1s linear 1 rotation;
 }
 
 @keyframes rotation{
